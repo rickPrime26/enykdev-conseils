@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "brand": "Jambo",
+    "home": "Accueil",
+    "invoices": "Factures",
+    "matching": "Arbitrage",
+    "products": "Produits",
+    "members": "Membres"
+  },
+
+  "login": {
+    "title": "Jambo",
+    "subtitle": "Outil interne — audit de factures",
+    "email": "Courriel",
+    "password": "Mot de passe",
+    "submit": "Se connecter",
+    "submitting": "Connexion…"
+  },
+
+  "changePassword": {
+    "title": "Changer le mot de passe",
+    "subtitle": "Votre mot de passe est temporaire. Il doit être remplacé avant d'accéder à l'application.",
+    "current": "Mot de passe actuel",
+    "new": "Nouveau mot de passe",
+    "confirm": "Confirmer le nouveau mot de passe",
+    "submit": "Changer le mot de passe",
+    "submitting": "Enregistrement…"
+  },
+
+  "invoiceEntry": {
+    "title": "Saisir une facture",
+    "subtitle": "Recopiez les lignes telles qu'elles apparaissent sur la facture, fautes comprises. Le rapprochement se fait ensuite.",
+    "member": "Membre",
+    "supplier": "Fournisseur",
+    "supplierRetailer": "détaillant",
+    "invoiceNumber": "N° de facture",
+    "date": "Date",
+    "subtotal": "Total avant taxes",
+    "none": "—",
+    "submit": "Enregistrer et rapprocher",
+    "submitting": "Enregistrement…",
+
+    "columns": {
+      "label": "Libellé, tel quel sur la facture",
+      "product": "Produit",
+      "supplierCode": "Code article",
+      "quantity": "Qté",
+      "packPrice": "Prix du format",
+      "costPerUseUnit": "Coût par unité d'usage"
+    },
+
+    "labelPlaceholder": "ESS MAIN KRU 16/250 CS",
+    "codePlaceholder": "code",
+    "addLine": "Ajouter une ligne",
+    "removeLine": "Retirer la ligne",
+    "noProduct": "— aucun produit —",
+    "createProduct": "+ créer ce produit"
+  },
+
+  "productDraft": {
+    "name": "nom du produit",
+    "category": "code de catégorie",
+    "packQuantity": "quantité du format (16)",
+    "unitSize": "taille unitaire (250)",
+    "unitSizeUom": "unité de mesure…",
+    "useUnit": "unité d'usage…",
+    "concentrate": "concentré",
+    "dilutionRatio": "ratio (64 pour 1:64)",
+    "dilutionBasis": "base de dilution — obligatoire…",
+    "dilutionPartsWater": "parts_water (1 + 64 = 65 parts)",
+    "dilutionTotalParts": "total_parts (1 dans 64 = 64 parts)",
+    "create": "Créer et rattacher",
+    "cancel": "Annuler"
+  },
+
+  "units": {
+    "sheet": "feuille",
+    "roll": "rouleau",
+    "litre_ready": "litre prêt",
+    "wash": "lavage",
+    "wipe": "lingette",
+    "unit": "unité",
+    "ml": "ml",
+    "l": "l",
+    "g": "g",
+    "kg": "kg"
+  },
+
+  "matchStatus": {
+    "pending": "à traiter",
+    "matched": "rapprochée",
+    "ambiguous": "à choisir",
+    "unmatched": "produit absent"
+  },
+
+  "invoiceStatus": {
+    "draft": "saisie en cours",
+    "submitted": "saisie complète",
+    "matched": "rapprochée"
+  },
+
+  "errors": {
+    "fieldsRequired": "Tous les champs sont obligatoires.",
+    "missingFields": "Manquant : {fields}.",
+    "badCredentials": "Courriel ou mot de passe incorrect.",
+    "mustChangePassword": "Votre mot de passe doit être changé avant de continuer.",
+    "unreachable": "Impossible de joindre le serveur. Vérifiez que l'API est démarrée.",
+    "passwordsDoNotMatch": "Les deux mots de passe ne correspondent pas.",
+    "passwordUnchanged": "Le nouveau mot de passe doit être différent de l'actuel.",
+    "passwordTooShort": "Le mot de passe doit contenir au moins {min} caractères.",
+
+    "INVOICE_MUST_HAVE_LINES": "Une facture doit contenir au moins une ligne.",
+    "INVOICE_ALREADY_EXISTS": "Cette facture a déjà été saisie pour ce membre et ce distributeur.",
+    "UNKNOWN_MEMBER_OR_DISTRIBUTOR": "Membre ou distributeur introuvable.",
+    "INVOICE_LINE_NOT_FOUND": "Ligne de facture introuvable.",
+    "UNKNOWN_PRODUCT": "Produit introuvable.",
+    "UNKNOWN_CATEGORY": "Catégorie inconnue.",
+    "UNKNOWN_USE_UNIT": "Unité d'usage inconnue.",
+    "PRODUCT_SKU_ALREADY_EXISTS": "Ce code article existe déjà chez ce fabricant.",
+    "CONCENTRATE_REQUIRES_DILUTION": "Un concentré exige son ratio ET sa base de dilution. « 1:64 » vaut 65 parts en parts_water et 64 en total_parts — on ne devine jamais.",
+    "PACK_QUANTITY_MUST_BE_POSITIVE": "Le format doit être strictement positif.",
+    "UNIT_SIZE_MUST_BE_POSITIVE": "Le format doit être strictement positif.",
+    "MISSING_REQUIRED_FIELDS": "Des champs obligatoires sont vides.",
+    "MANUFACTURER_ID_REQUIRES_ADMIN": "Seul un administrateur peut désigner le fabricant.",
+    "MIGRATION_006_NOT_APPLIED": "La base n'est pas à jour : migration 006 non appliquée.",
+    "unknown": "Une erreur est survenue ({code})."
+  },
+
+  "totals": {
+    "mismatch": "La somme des lignes ({lines}) ne correspond pas au total de la facture ({total}). Écart de {gap}. Causes fréquentes : frais de livraison, crédit, consigne."
+  }
+}

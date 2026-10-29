@@ -1,0 +1,13 @@
+# Never copy these into the image.
+# node_modules especially — it is built for your Mac, not for Alpine Linux,
+# and any native module would be the wrong binary.
+
+node_modules
+.next
+npm-debug.log*
+.git
+.gitignore
+.env.local
+README.md
+CONVENTIONS.md
+jambo-web-structure.md

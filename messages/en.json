@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "brand": "Jambo",
+    "home": "Home",
+    "invoices": "Invoices",
+    "matching": "Matching",
+    "products": "Products",
+    "members": "Members"
+  },
+
+  "login": {
+    "title": "Jambo",
+    "subtitle": "Internal tool — invoice audit",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "submitting": "Signing in…"
+  },
+
+  "changePassword": {
+    "title": "Change your password",
+    "subtitle": "Your password is temporary. It must be replaced before you can use the application.",
+    "current": "Current password",
+    "new": "New password",
+    "confirm": "Confirm new password",
+    "submit": "Change password",
+    "submitting": "Saving…"
+  },
+
+  "invoiceEntry": {
+    "title": "Enter an invoice",
+    "subtitle": "Copy the lines exactly as they appear on the invoice, typos included. Matching happens afterwards.",
+    "member": "Member",
+    "supplier": "Supplier",
+    "supplierRetailer": "retailer",
+    "invoiceNumber": "Invoice no.",
+    "date": "Date",
+    "subtotal": "Total before tax",
+    "none": "—",
+    "submit": "Save and match",
+    "submitting": "Saving…",
+
+    "columns": {
+      "label": "Label, exactly as printed",
+      "product": "Product",
+      "supplierCode": "Supplier code",
+      "quantity": "Qty",
+      "packPrice": "Pack price",
+      "costPerUseUnit": "Cost per use unit"
+    },
+
+    "labelPlaceholder": "ESS MAIN KRU 16/250 CS",
+    "codePlaceholder": "code",
+    "addLine": "Add a line",
+    "removeLine": "Remove line",
+    "noProduct": "— no product —",
+    "createProduct": "+ create this product"
+  },
+
+  "productDraft": {
+    "name": "product name",
+    "category": "category code",
+    "packQuantity": "pack qty (16)",
+    "unitSize": "unit size (250)",
+    "unitSizeUom": "unit of size…",
+    "useUnit": "use unit…",
+    "concentrate": "concentrate",
+    "dilutionRatio": "ratio (64 for 1:64)",
+    "dilutionBasis": "dilution basis — required…",
+    "dilutionPartsWater": "parts_water (1 + 64 = 65 parts)",
+    "dilutionTotalParts": "total_parts (1 in 64 = 64 parts)",
+    "create": "Create and link",
+    "cancel": "Cancel"
+  },
+
+  "units": {
+    "sheet": "sheet",
+    "roll": "roll",
+    "litre_ready": "ready litre",
+    "wash": "wash",
+    "wipe": "wipe",
+    "unit": "unit",
+    "ml": "ml",
+    "l": "l",
+    "g": "g",
+    "kg": "kg"
+  },
+
+  "matchStatus": {
+    "pending": "pending",
+    "matched": "matched",
+    "ambiguous": "choose one",
+    "unmatched": "product missing"
+  },
+
+  "invoiceStatus": {
+    "draft": "draft",
+    "submitted": "submitted",
+    "matched": "matched"
+  },
+
+  "errors": {
+    "fieldsRequired": "All fields are required.",
+    "missingFields": "Missing: {fields}.",
+    "badCredentials": "Email or password incorrect.",
+    "mustChangePassword": "Your password must be changed before you can continue.",
+    "unreachable": "Could not reach the server. Check that the API is running.",
+    "passwordsDoNotMatch": "The two passwords do not match.",
+    "passwordUnchanged": "The new password must differ from the current one.",
+    "passwordTooShort": "The password must be at least {min} characters.",
+
+    "INVOICE_MUST_HAVE_LINES": "An invoice needs at least one line.",
+    "INVOICE_ALREADY_EXISTS": "This invoice was already entered for this member and distributor.",
+    "UNKNOWN_MEMBER_OR_DISTRIBUTOR": "Unknown member or distributor.",
+    "INVOICE_LINE_NOT_FOUND": "Invoice line not found.",
+    "UNKNOWN_PRODUCT": "Unknown product.",
+    "UNKNOWN_CATEGORY": "Unknown category.",
+    "UNKNOWN_USE_UNIT": "Unknown use unit.",
+    "PRODUCT_SKU_ALREADY_EXISTS": "This SKU already exists for this manufacturer.",
+    "CONCENTRATE_REQUIRES_DILUTION": "A concentrate requires both its ratio AND its dilution basis. \"1:64\" is 65 parts in parts_water and 64 in total_parts — it is never guessed.",
+    "PACK_QUANTITY_MUST_BE_POSITIVE": "Pack format must be strictly positive.",
+    "UNIT_SIZE_MUST_BE_POSITIVE": "Pack format must be strictly positive.",
+    "MISSING_REQUIRED_FIELDS": "Required fields are missing.",
+    "MANUFACTURER_ID_REQUIRES_ADMIN": "Only an admin can set the manufacturer.",
+    "MIGRATION_006_NOT_APPLIED": "Database out of date: migration 006 not applied.",
+    "unknown": "Something went wrong ({code})."
+  },
+
+  "totals": {
+    "mismatch": "The sum of the lines ({lines}) does not match the invoice total ({total}). Gap of {gap}. Common causes: delivery charges, a credit, a deposit."
+  }
+}

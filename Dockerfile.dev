@@ -1,0 +1,32 @@
+# ===========================================================================
+# Dockerfile.dev — jambo-web in development.
+#
+# Development only. It runs `next dev`, keeps the source mounted from your
+# machine, and rebuilds on save. Never deploy this image.
+#
+# WHY node_modules IS NOT COPIED IN
+#   docker-compose mounts ./jambo-web over /app so your edits appear instantly.
+#   That mount would also hide the node_modules installed here — so the compose
+#   file adds a second, anonymous volume on /app/node_modules to protect it.
+#   Without that, the container would start with no dependencies at all.
+# ===========================================================================
+
+FROM node:24-alpine
+
+WORKDIR /app
+
+# Copy only the manifests first. Docker caches this layer, so npm install
+# re-runs only when package.json changes — not on every source edit.
+COPY package*.json ./
+
+RUN npm install
+
+# The rest of the source. In dev this gets overlaid by the bind mount anyway,
+# but it keeps the image usable on its own.
+COPY . .
+
+EXPOSE 3000
+
+# Bind to 0.0.0.0, not localhost. Inside a container, "localhost" means the
+# container itself — your Mac would never reach it.
+CMD ["npm", "run", "dev", "--", "--hostname", "0.0.0.0"]
